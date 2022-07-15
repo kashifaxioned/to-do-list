@@ -23,13 +23,35 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <header>
-      
+    <header class="header">
+      <div class="wrapper">
+        <h1 class="header__logo"><a href="index.html" title="Home">To-Do List</a></h1>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <div class="home">
+        <div class="wrapper">
+          <form action="/" class="home__form">
+            <div class="home__form__inp"><input class="header__form__inp__field" type="text" name="search-inp"></div>
+            <div class="home__form__add"><button class="home__form__add__btn" type="submit">add</button></div>
+          </form>
+          <ul class="home__todo__list">
+            <li class="home__todo__list__item home__todo__list__item--static">
+             <span class="home__todo__list__item__text">Add</span>
+             <span class="home__todo__list__item__clear">clear</span>
+             <span class="home__todo__list__item__edit">edit</span> 
+            </li>
+            <li class="home__todo__list__item home__todo__list__item--static">
+              <span class="home__todo__list__item__text">Add</span>
+              <span class="home__todo__list__item__clear">clear</span>
+              <span class="home__todo__list__item__edit">edit</span> 
+            </li>
+            <span class="home__todo__list__item__clear__all">clear all</span> 
+          </ul>
+        </div>
+      </div>
     </main>
     <!--main section end-->
 

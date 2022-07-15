@@ -1,0 +1,10 @@
+.header {
+  padding: 1rem 0;
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  &__logo {
+    font-family: "Noto Serif JP", serif;
+    @include font (2rem, 500)
+  }
+}

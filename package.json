@@ -1,0 +1,24 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "This is a Simple To-Do List web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w assets/sass/style.scss assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kashifaxioned/to-do-list.git"
+  },
+  "keywords": [],
+  "author": "Kashif Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashifaxioned/to-do-list/issues"
+  },
+  "homepage": "https://github.com/kashifaxioned/to-do-list#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

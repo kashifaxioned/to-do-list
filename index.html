@@ -36,22 +36,25 @@
       <div class="home">
         <div class="wrapper">
           <form action="/" class="home__form">
-            <div class="home__form__inp"><input class="home__form__inp__field" type="text" name="search-inp" placeholder="Add Item"></div>
+            <div class="home__form__inp"><input class="home__form__inp__field" type="text" name="search-inp" placeholder="Add Item" autocomplete="off"></div>
             <div class="home__form__add"><button class="home__form__add__btn" type="submit">add</button></div>
           </form>
-          <ul class="home__todo__list">
-            <li class="home__todo__list__item home__todo__list__item--static">
-             <span class="home__todo__list__item__text">Add</span>
-             <span class="home__todo__list__item__clear">clear</span>
-             <span class="home__todo__list__item__edit">edit</span> 
-            </li>
-            <li class="home__todo__list__item home__todo__list__item--static">
-              <span class="home__todo__list__item__text">Add</span>
-              <span class="home__todo__list__item__clear">clear</span>
-              <span class="home__todo__list__item__edit">edit</span> 
-            </li>
-            <span class="home__todo__list__item__clear__all">clear all</span> 
-          </ul>
+          <div class="home__todo">
+            <ul class="home__todo__list">
+              <li class="home__todo__list__item home__todo__list__item--static">
+               <span class="home__todo__list__item__text">Add</span>
+               <span class="home__todo__list__item__clear">clear</span>
+               <span class="home__todo__list__item__edit">edit</span> 
+              </li>
+              <li class="home__todo__list__item home__todo__list__item--static">
+                <span class="home__todo__list__item__text">Add</span>
+                <span class="home__todo__list__item__clear">clear</span>
+                <span class="home__todo__list__item__edit">edit</span> 
+              </li>
+            </ul>
+            <span class="home__todo__clear__all">clear all</span> 
+          </div>
+         
         </div>
       </div>
     </main>

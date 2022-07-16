@@ -125,10 +125,10 @@ li {
     font-weight: 500; }
 
 .home {
-  height: 92vh;
+  min-height: 92vh;
   background-color: #FFFFDE; }
   .home .wrapper {
-    height: inherit;
+    min-height: inherit;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -177,94 +177,96 @@ li {
       .home__form__add__btn:hover {
         background-color: transparent;
         color: #0078AA; }
-  .home__todo__list {
+  .home__todo {
     padding: 2rem;
     border-left: 1px solid #0078AA;
-    flex-basis: 50%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 10px; }
+    flex-basis: 50%; }
     @media screen and (max-width: 1024px) {
-      .home__todo__list {
+      .home__todo {
         width: 100%;
         padding: 5rem 0;
         border: none;
         border-top: 1px solid #0078AA; } }
-    .home__todo__list__item {
+    .home__todo__list {
       display: flex;
       flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem; }
-      .home__todo__list__item__text {
-        padding: 10px 0;
-        border-radius: 25px;
-        flex-basis: 80%;
-        background-color: #0078AA;
-        color: #FCF8E8;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 500; }
-      .home__todo__list__item__clear {
-        border: 1px solid #0078AA;
-        border-radius: 50%;
-        background-color: #0078AA;
-        color: #FCF8E8;
-        cursor: pointer;
-        text-indent: -999999px; }
-        .home__todo__list__item__clear::before {
-          padding: 12px 16px 12px 16px;
-          content: "";
-          color: inherit;
-          font-family: "FontAwesome";
-          font-size: 1.3rem;
-          font-weight: 500;
-          float: right;
-          text-indent: 0; }
-        .home__todo__list__item__clear:hover {
-          background-color: transparent;
-          color: #0078AA; }
-      .home__todo__list__item__edit {
-        border: 1px solid #0078AA;
-        border-radius: 50%;
-        background-color: #0078AA;
-        color: #FCF8E8;
-        cursor: pointer;
-        text-indent: -999999px; }
-        .home__todo__list__item__edit::before {
-          padding: 12px 12px 12px 14px;
-          content: "";
-          color: inherit;
-          font-family: "FontAwesome";
-          font-size: 1.3rem;
-          font-weight: 500;
-          float: right;
-          text-indent: 0; }
-        .home__todo__list__item__edit:hover {
-          background-color: transparent;
-          color: #0078AA; }
-      .home__todo__list__item__clear__all {
-        margin-top: 1rem;
-        align-self: flex-end;
-        border: 1px solid #0078AA;
-        border-radius: 50%;
-        background-color: #0078AA;
-        color: #FCF8E8;
-        cursor: pointer;
-        text-indent: -999999px; }
-        .home__todo__list__item__clear__all::before {
-          padding: 12px 12px 12px 14px;
-          content: "";
-          color: inherit;
-          font-family: "FontAwesome";
-          font-size: 1.3rem;
-          font-weight: 500;
-          float: right;
-          text-indent: 0; }
-        .home__todo__list__item__clear__all:hover {
-          background-color: transparent;
-          color: #0078AA; }
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 10px; }
+      .home__todo__list__item {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem; }
+        .home__todo__list__item__text {
+          padding: 10px 0;
+          border-radius: 25px;
+          flex-basis: 80%;
+          background-color: #0078AA;
+          color: #FCF8E8;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: 500; }
+        .home__todo__list__item__clear {
+          border: 1px solid #0078AA;
+          border-radius: 50%;
+          background-color: #0078AA;
+          color: #FCF8E8;
+          cursor: pointer;
+          text-indent: -999999px; }
+          .home__todo__list__item__clear::before {
+            padding: 12px 16px 12px 16px;
+            content: "";
+            color: inherit;
+            font-family: "FontAwesome";
+            font-size: 1.3rem;
+            font-weight: 500;
+            float: right;
+            text-indent: 0; }
+          .home__todo__list__item__clear:hover {
+            background-color: transparent;
+            color: #0078AA; }
+        .home__todo__list__item__edit {
+          border: 1px solid #0078AA;
+          border-radius: 50%;
+          background-color: #0078AA;
+          color: #FCF8E8;
+          cursor: pointer;
+          text-indent: -999999px; }
+          .home__todo__list__item__edit::before {
+            padding: 12px 12px 12px 14px;
+            content: "";
+            color: inherit;
+            font-family: "FontAwesome";
+            font-size: 1.3rem;
+            font-weight: 500;
+            float: right;
+            text-indent: 0; }
+          .home__todo__list__item__edit:hover {
+            background-color: transparent;
+            color: #0078AA; }
+    .home__todo__clear__all {
+      margin-top: 1rem;
+      display: inline-block;
+      float: right;
+      border: 1px solid #0078AA;
+      border-radius: 50%;
+      background-color: #0078AA;
+      color: #FCF8E8;
+      cursor: pointer;
+      text-indent: -999999px; }
+      .home__todo__clear__all::before {
+        padding: 12px 12px 12px 14px;
+        content: "";
+        color: inherit;
+        font-family: "FontAwesome";
+        font-size: 1.3rem;
+        font-weight: 500;
+        float: right;
+        text-indent: 0; }
+      .home__todo__clear__all:hover {
+        background-color: transparent;
+        color: #0078AA; }

@@ -25,3 +25,9 @@ li {
   @include breakpoint (pc) { width: 90%; }
 }
 
+.hide { display: none; }
+
+.show { display: block; }
+
+.flex-show { display: flex; }
+

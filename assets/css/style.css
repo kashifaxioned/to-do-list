@@ -106,6 +106,15 @@ li {
     .wrapper {
       width: 90%; } }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+.flex-show {
+  display: flex; }
+
 .header {
   padding: 1rem 0;
   background-color: #0078AA;

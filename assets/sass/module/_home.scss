@@ -31,7 +31,8 @@
     }
 
     &__add {
-     @include icon-btn("\2b", 17px, 17px, 17px, 17px)
+
+      &__btn { @include icon-btn("\2b", 17px, 14px, 17px, 14px); }
     }
   }
 

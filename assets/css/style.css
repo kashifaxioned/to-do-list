@@ -158,15 +158,15 @@ li {
       outline: none;
       font-size: 1.6rem;
       font-weight: 500; }
-    .home__form__add {
+    .home__form__add__btn {
       border: 1px solid #0078AA;
       border-radius: 50%;
       background-color: #0078AA;
       color: #FCF8E8;
       cursor: pointer;
       text-indent: -999999px; }
-      .home__form__add::before {
-        padding: 17px 17px 17px 17px;
+      .home__form__add__btn::before {
+        padding: 17px 14px 17px 14px;
         content: "+";
         color: inherit;
         font-family: "FontAwesome";
@@ -174,7 +174,7 @@ li {
         font-weight: 500;
         float: right;
         text-indent: 0; }
-      .home__form__add:hover {
+      .home__form__add__btn:hover {
         background-color: transparent;
         color: #0078AA; }
   .home__todo__list {

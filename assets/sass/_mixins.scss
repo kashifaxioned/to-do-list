@@ -1,10 +1,29 @@
-@mixin icon ($content, $font-size, $font-weight, $color) {
+@mixin icon ($content, $top, $right, $bottom, $left) {
+  padding:  $top $right $bottom $left;
   content: $content;
-  color: $color;
+  color: inherit;
   font-family: "FontAwesome";
-  font-size: $font-size;
-  font-weight: $font-weight;
+  font-size: 1.3rem;
+  font-weight: 500;
+  float: right;
+  text-indent: 0;
 } 
+
+@mixin icon-btn ($content, $top, $right, $bottom, $left) {
+  border: 1px solid $secondary-color;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  cursor: pointer;
+  text-indent: -999999px;
+
+  &::before { @include icon ($content, $top, $right, $bottom, $left); }
+  
+  &:hover {
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}
 
 @mixin flexBox ($flex-direction, $justify-content, $align-items, $wrap) {
   display: flex;

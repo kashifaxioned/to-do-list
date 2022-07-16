@@ -20,7 +20,8 @@ li {
 
 .wrapper {
   margin: 0 auto;
-  width: 90%; 
+  width: 70%; 
 
-  @include breakpoint (large-pc) { width: 80%; }
+  @include breakpoint (pc) { width: 90%; }
 }
+

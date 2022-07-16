@@ -1,0 +1,79 @@
+.home {
+  height: 92vh;
+  background-color: $primary-color;
+
+  & .wrapper { 
+    height: inherit;
+    @include flexBox (auto, center, center, false); 
+
+    @include breakpoint (ipad-pro) { flex-direction: column; }
+  }
+
+  &__form {
+    padding: 5rem 0;
+    flex-basis: 50%;
+    @include flexBox (auto, auto, center, false);
+    gap: 5rem;
+
+    @include breakpoint (ipad-pro) { padding: 2rem 0; }
+
+    &__inp {
+
+      &__field {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid $secondary-color;
+        background: none;
+        outline: none;   
+        @include font (1.6rem, 500)     
+      }
+    }
+
+    &__add {
+     @include icon-btn("\2b", 17px, 17px, 17px, 17px)
+    }
+  }
+
+  &__todo__list {
+    padding: 2rem;
+    border-left: 1px solid $secondary-color;
+    flex-basis: 50%;
+
+    @include breakpoint (ipad-pro) {
+      width: 100%;
+      padding: 5rem 0;
+      border: none;
+      border-top: 1px solid $secondary-color;
+    }
+
+    @include flexBox (column, auto, auto, false);
+    gap: 10px;
+
+    &__item {
+      @include flexBox (auto, space-between, center, false);
+      gap: 1rem;
+
+      &__text {
+        padding: 10px 0;
+        border-radius: 25px;
+        flex-basis: 80%;
+        background-color: $secondary-color;
+        color: $tertiary-color;
+        text-align: center;
+        @include font (1.5rem, 500);
+      }
+
+      &__clear { @include icon-btn ("\f1f8", 12px, 16px, 12px, 16px ); }
+    
+      &__edit { @include icon-btn ("\f044", 12px, 12px, 12px, 14px ); }
+
+      &__clear__all { 
+        margin-top: 1rem;
+        align-self: flex-end;
+        @include icon-btn ("\f550", 12px, 12px, 12px, 14px ); 
+      
+      }
+    }
+  }
+}

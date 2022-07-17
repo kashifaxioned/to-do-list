@@ -19,9 +19,11 @@
 
   &::before { @include icon ($content, $top, $right, $bottom, $left); }
   
-  &:hover {
-    background-color: transparent;
-    color: $secondary-color;
+  @include breakpoint(min-ipad) {
+    &:hover {
+      background-color: transparent;
+      color: $secondary-color;
+    }
   }
 }
 

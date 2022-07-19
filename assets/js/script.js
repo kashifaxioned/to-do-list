@@ -1,7 +1,7 @@
-let form = document.querySelector(".home__form");
-let list = document.querySelector(".home__todo__list");
-let noItem = document.querySelector(".home__todo__no-item");
-let clearAll = document.querySelector(".home__todo__clear__all");
+const form = document.querySelector(".home__form");
+const list = document.querySelector(".home__todo__list");
+const noItem = document.querySelector(".home__todo__no-item");
+const clearAll = document.querySelector(".home__todo__clear__all");
 let items, clear, edit;
 
 // event listener added for claear all btn
@@ -13,63 +13,64 @@ form.addEventListener("submit", function(e) { formSubmit(e) });
 // function for submit form
 function formSubmit(e) {
   e.preventDefault();
-  let item = form.elements[0].value;
-  addItem(item)
-  checkItems()
-  form.reset()
+  const item = form.elements[0].value;
+  if (item !== "") { addItem(item); }
+  checkItems();
+  form.reset();
 }
 
 // function for checking if the items is present or not
 function checkItems () {
   if (list.hasChildNodes()) {
-    noItem.classList.add("hide")
-    clearAll.classList.remove("hide")
+    noItem.classList.add("hide");
+    clearAll.classList.remove("hide");
   } else {
-    noItem.classList.remove("hide")
-    clearAll.classList.add("hide")
+    noItem.classList.remove("hide");
+    clearAll.classList.add("hide");
   }
 }
 
 // funtion for adding todo list item 
 function addItem(item) {
   let listItem = document.createElement("li");
-  listItem.classList.add("home__todo__list__item")
+  listItem.classList.add("home__todo__list__item");
   listItem.innerHTML = `
   <span class="home__todo__list__item__text">${item}</span>
   <span class="home__todo__list__item__edit">edit</span> 
   <span class="home__todo__list__item__clear">clear</span>
   `
-  list.appendChild(listItem)
+  list.appendChild(listItem);
 
-  items = document.querySelectorAll(".home__todo__list__item")
+  items = document.querySelectorAll(".home__todo__list__item");
 
   clear = document.querySelectorAll(".home__todo__list__item__clear");
-  clear.forEach (x => x.addEventListener("click", function (e) { handleClear (e); }))
+  clear.forEach (x => x.addEventListener("click", function (e) { handleClear (e); }));
 
   edit = document.querySelectorAll(".home__todo__list__item__edit");
-  edit.forEach (x => x.addEventListener("click", function (e) { handleEdit (e); }))
+  edit.forEach (x => x.addEventListener("click", function (e) { handleEdit (e); }));
 }
 
 // function for clear the item
 function handleClear(e) {
-  let clearEle = e.target.parentElement
-  checkItems()
+  e.target.parentElement.remove();
+  checkItems();
 }
 
 // function for edit the item
 function handleEdit(e) {
-  let editText = e.target.previousElementSibling.innerHTML;
+  let editText = e.target;
+  editText = editText.previousElementSibling.innerHTML;
   form.elements[0].value = editText;
   handleClear(e)
 }
 
 // function for clear all the items
 function clearAllItems () {
-  items.forEach(x => x.remove())
-  checkItems()
+  items.forEach(x => x.remove());
+  checkItems();
 }
 
-checkItems()
+checkItems();
 
 
 
